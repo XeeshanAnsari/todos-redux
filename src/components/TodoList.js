@@ -6,7 +6,7 @@ class TodoList extends Component{
     render(){
         return (
             <ul>
-                { console.log(this.props.todos )}
+                
                 {this.props.todos.map(todo => //todos props coming from container component 
                    
                     <Todo
