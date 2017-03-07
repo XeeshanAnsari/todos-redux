@@ -1,8 +1,6 @@
- 
-import actionType from '../constant/action-type' 
 
 
-let nextTodoId =0
+let nextTodoId = 0
 
 export function addTodo(text){
     return{
