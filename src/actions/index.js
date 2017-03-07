@@ -11,16 +11,16 @@ export function addTodo(text){
     }
 }
 
-export function setVisibiltyFilter(filter){
+export function setVisibilityFilter(filter){
     return{
-        type: 'SET_VISIBILTY_FILTER',
+        type: 'SET_VISIBILITY_FILTER',
         filter
     }
 } 
 
-export function tiggleTodo(id){
+export function toggleTodo(id){
     return{
         type:'TOGGLE_TODO',
-        id
+          id
     }
 }

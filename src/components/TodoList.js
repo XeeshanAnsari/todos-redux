@@ -6,12 +6,16 @@ class TodoList extends Component{
     render(){
         return (
             <ul>
+                { console.log(this.props.todos )}
                 {this.props.todos.map(todo => //todos props coming from container component 
+                   
                     <Todo
-                       key ={this.props.todo.id}
-                       {...this.props.todo}
-                       onClick = {() => this.props.onTodoClick(this.props.todo.id)}
+                       key ={todo.id}
+                       {...todo}
+                       onClick = {() => this.props.onTodoClick(todo.id)}
+                       
                     />
+                    
                 )
 
                 }
@@ -20,3 +24,5 @@ class TodoList extends Component{
         )
     }
 }
+
+export default TodoList

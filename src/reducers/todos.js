@@ -21,22 +21,20 @@ function todo(state = {}, action){
     }
 }
 
-function  todos(state =[] , action){  // define empty array in initial state
-    switch(action.type){
-        case 'ADD_TODO':
-           return [
-               ...state,    //spreed operator method to select all state
-               todos(undefined, action)  // concotination state
-           ]
-
-
-        case 'TOGGLE_TODO':
-         return state.map(t => todo(t, action)) 
-
-
-       default :
-          return state  
-    }
+const todos = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return [
+        ...state,
+        todo(undefined, action)
+      ]
+    case 'TOGGLE_TODO':
+      return state.map(t =>
+        todo(t, action)
+      )
+    default:
+      return state
+  }
 }
 
 
